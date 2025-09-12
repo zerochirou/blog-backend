@@ -1,4 +1,4 @@
-# TapGo Backend Services
+# Blog Backend
 
 ## Commit Rules
 
