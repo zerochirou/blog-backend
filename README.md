@@ -22,7 +22,7 @@ More Examples:
 |-----------|-----------------------------------------------------------------------------------------------|
 | `feat` | fitur baru untuk pengguna, bukan fitur baru untuk skrip build |
 | `fix` | perbaikan bug untuk pengguna, bukan perbaikan pada skrip build |
-| `change` | perbuhan kode bersifat global dan umum |
+| `change` | perubahan kode bersifat global dan umum |
 | `docs` | penambahan dan perubahan dokumentasi |
 | `renewal` | memperbarui fungsi kode, mempengaruhi kode produksi |
 | `style` | pemformatan, titik koma hilang, dll; tidak ada perubahan kode produksi |
