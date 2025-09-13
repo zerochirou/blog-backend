@@ -11,7 +11,7 @@ export default class PostsController {
   public async findAllPosts({ response }: HttpContext) {
     try {
       const posts = await this.postService.findAll()
-      return response.status(200).send(posts)
+      return response.status(200).send({ status: 'success', data: posts })
     } catch (error) {
       logger.error({ message: error })
       return response.internalServerError('internal server error')
@@ -22,7 +22,7 @@ export default class PostsController {
     try {
       const id = request.param('id')
       const postsByCategory = await this.postService.findByCategory(id)
-      return response.status(200).send(postsByCategory)
+      return response.status(200).send({ status: 'success', data: postsByCategory })
     } catch (error) {
       logger.error({ message: error })
       return response.internalServerError('internal server error')
@@ -33,7 +33,7 @@ export default class PostsController {
     try {
       const slug = request.param('slug')
       const postsById = await this.postService.findBySlug(slug)
-      return response.status(200).send(postsById)
+      return response.status(200).send({ status: 'success', data: postsById })
     } catch (error) {
       logger.error({ message: error })
       return response.internalServerError('internal server error')
@@ -44,7 +44,7 @@ export default class PostsController {
     try {
       const payload = await request.validateUsing(createPost)
       const createdPost = await this.postService.create(payload)
-      return response.status(201).send(createdPost)
+      return response.status(201).send({ status: 'success', data: createdPost })
     } catch (error) {
       logger.error({ message: error })
       return response.internalServerError('internal server error')
@@ -55,7 +55,7 @@ export default class PostsController {
     try {
       const id = request.param('id')
       const deletedPost = await this.postService.remove(id)
-      return response.status(200).send(deletedPost)
+      return response.status(200).send({ status: 'success', data: deletedPost })
     } catch (error) {
       logger.error({ message: error })
       return response.internalServerError('internal server error')
