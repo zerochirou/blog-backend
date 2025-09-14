@@ -55,3 +55,5 @@ deadline: 4 september 2025
 | `SEO` | Tempat para UMKM membuat profile usaha mereka `deadline: 20 september 2025` |
 | `Secure System` | Pengetesan keamanan seperti ddos, dll...`deadline: 20 september 2025` |
 ||
+
+https://roadmap.sh/projects/blogging-platform-api
